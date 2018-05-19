@@ -1,23 +1,17 @@
-const reverseInt = require('./index');
+const reverseString = require('./index');
 
-test('ReverseInt function exists', () => {
-  expect(reverseInt).toBeDefined();
+test('ReverseString function exists', () => {
+  expect(reverseString).toBeDefined();
 });
 
-test('ReverseInt handles 0 as an input', () => {
-  expect(reverseInt(0)).toEqual(0);
+test('ReverseString reverses "kissa"', () => {
+  expect(reverseString('kissa')).toEqual('assik');
 });
 
-test('ReverseInt reverses a positive number', () => {
-  expect(reverseInt(9)).toEqual(9);
-  expect(reverseInt(12)).toEqual(21);
-  expect(reverseInt(80)).toEqual(8);
-  expect(reverseInt(120410)).toEqual(14021);
+test('ReverseString reverses a string  "<-tyhjä tila"', () => {
+  expect(reverseString('  <-tyhjä tila')).toEqual('alit äjhyt-<  ');
 });
 
-test('ReverseInt reverses a negative number', () => {
-  expect(reverseInt(-2)).toEqual(-2);
-  expect(reverseInt(-41)).toEqual(-14);
-  expect(reverseInt(-80)).toEqual(-8);
-  expect(reverseInt(-120430)).toEqual(-34021);
+  test('ReverseString reverses a string  "Tosi on tosi."', () => {
+    expect(reverseString('Tosi on tosi.')).toEqual('.isot no isoT');
 });
