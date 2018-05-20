@@ -1,3 +1,4 @@
+
 function chunk(arr, num) {
 
 let chunked = [];
@@ -24,5 +25,19 @@ for(let element of arr) {
 
 return chunked;
 }
+
+/* 
+// Chunk with slice:
+
+function chunk(array, size) {
+
+        let chunked = [];
+        
+        for(let i=0; i < array.length; i+size) {
+            chunked.push(array.slice(i, i+size));
+        }
+    return chunked;
+}
+*/
 
 module.exports = chunk;
