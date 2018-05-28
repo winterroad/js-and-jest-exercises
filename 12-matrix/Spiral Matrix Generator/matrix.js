@@ -4,8 +4,7 @@ const FRAGMENT = document.createDocumentFragment();
 const SIZEPICKER = document.getElementById("matrixSize");
 let size;
 let array;
-//TODO: FORM TO GET THE n FROM
-//FIXME:
+
 SIZEPICKER.addEventListener('submit', function (e) {
   e.preventDefault();
   size = document.getElementById("input_size").value;
@@ -15,9 +14,8 @@ SIZEPICKER.addEventListener('submit', function (e) {
 
 //TODO: "FORM" TO GET COLOR + EVENT LISTENER + COLOR TABLE
 
-
 /* ------------------ MODEL ------------------------ */
-//TODO: Create Spiral function instead of the array
+
 /* CREATE A SPIRAL MATRIX */
 function createSpiralMatrix(n){
   var spiralmatrix = [];
@@ -39,7 +37,6 @@ function createSpiralMatrix(n){
           spiralmatrix[min_row][i]=num;
           num++;
       }
-
       min_row++;
 
 
@@ -47,7 +44,6 @@ function createSpiralMatrix(n){
           spiralmatrix[i][max_col]=num;
           num++;
       }
-
       max_col--;
 
 
@@ -55,14 +51,12 @@ function createSpiralMatrix(n){
           spiralmatrix[max_row][i]=num;
           num++;
       }
-
       max_row--;
 
       for(let i=max_row; i>=min_row; i--) {
           spiralmatrix[i][min_col]=num;
           num++;
       }
-
       min_col++;
   }
 
